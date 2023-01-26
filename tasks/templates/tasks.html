@@ -6,27 +6,32 @@
         <div class="col-md-6 offset-md-3">
             <h1 class="text-center display-3 py-5">tasks Pending</h1>
 
-                <ul class="list-group">
+               
                     {% for task in tasks %}
-                    <a class="list-group-item" href = "{% url 'task_detail' task.id %}">
+                    <a style = "text-decoration: none" class="card bg-secondary mt-2 fw-bold text-white" href = "{% url 'task_detail' task.id %}">
                      
-                        <header class="d-flex justify-content-between">
+                       
                             {% if task.important %}
-                                <h1 class="fw-bold text-primary">{{task.title  }} </h1>   
+                                <h1 class="card-header display-6"> Titulo: <strong class="text-light">{{task.title  }}</strong> </h1>   
                             {% else %}
-                            <h1 class="fw-bold "> {{task.title}}</h1>
+                            <h1 class="card-header display-6"> Title <strong class="text-light">{{task.title  }}</strong> </h1>
                             {% endif%}
-                            <p>{{task.user.username}}</p>
-                        </header>
-                            <p>{{task.description}}</p>
+                            
+                        <div class="card-body content-between">
+                            <h3 class="card-text display-6">User <strong class="text-light">{{task.user.username}}</strong></h3>
+
+                            <h3 class="card-text display-6">Description <strong class="text-light">{{task.description}}</strong> </h3>
                            
-                            <p>{{task.datecompleted|date:'M j Y:i'}}</p>
+                            <h3 class="card-text display-6">Date <strong class="text-light">{{task.datecompleted|date:'M j Y:i'}}</strong>
+                            </h3>
+                        </div>
+                            
                         
                        
                     </a>
                     
                     {% endfor %}
-                </ul>
+            
         </div>
     </div>
 </main>
