@@ -119,8 +119,8 @@ def signin(request):
             login(request, user)
             return redirect('tasks')
 
-def prueba(request):
-    return HttpResponse('Prueba')
+def kadena(request):
+    return render(request, 'kadena.html')
       
 
     

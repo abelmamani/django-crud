@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transition: 0.7s;
+            padding: 20px 30px;
+            margin: auto;
+            z-index: 10;
+          
+
+
+
+
+        }
+
+        header.abajo{
+            padding: 15px 20px;
+            background: rgb(3, 3, 161);
+            opacity: 0.9;
+           
+
+        }
+
+        header .logo{
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            font-family: Helvetica;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 2em;
+            transition: 1.5s;
+
+        }
+
+        header .logo:hover{
+            color: rgb(252, 69, 219);
+            transition: 0.3s;
+            font-size: 2.1em;
+        }
+
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+        header ul{
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        header ul li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+
+        }
+
+        header ul li a{
+            position: relative;
+            font-family: Helvetica;
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 2px;
+            font-weight: 600;
+            transition: 0.7s;
+            font-size: 1.2rem;
+
+        }
+
+        
+        header ul li::before, header .logo::before{
+            content: "";
+            height: 3px;
+            width: 0%;
+            background: rgb(252, 69, 219);
+            position: absolute;
+            left: 0px;
+            bottom: -12px;
+            transition: 0.4s ease-out;
+
+        }
+
+        header ul li:hover::before, header .logo:hover::before {
+            width: 100px;
+          
+        }
+
+        header ul li a:hover, header ul li .submenu li a:hover{
+            color: rgb(252, 69, 219);
+            transition: 0.3s;
+            font-size: 1.3rem;
+        }
+
+
+        .zona1{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url(https://i0.wp.com/criptotendencia.com/wp-content/uploads/2020/06/Blockchain-de-JP-Morgan-y-su-token-Kadena.jpg?fit=1200%2C675&ssl=1&resize=1280%2C720);
+            background-size: cover;
+            background-position: top;
+            margin-top: top;
+           
+        
+        }
+
+        header.abajo .logo, 
+        header.abajo ul li a{
+            color: rgb(159, 201, 213);
+            
+        }
+
+        header.abajo ul li a:hover, header.abajo .logo:hover{
+            color: #fff;
+        }
+
+        header.abajo ul li::before, header.abajo .logo::before{
+            content: "";
+            height: 3px;
+            width: 0%;
+            background:#fff;
+            position: absolute;
+            left: 0px;
+            bottom: -12px;
+            transition: 0.4s ease-out;
+
+        }
+
+        header.abajo ul li:hover::before, header.abajo .logo:hover::before{
+            width: 100px;
+          
+        }
+
+        
+
+        
+   /*ACÁ COMIENZA CSS PARA SUBMENU*/
+   .submenu{
+    display: block;
+    position: absolute;
+    background: rgb(3, 3, 161);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.1s;
+
+   }
+
+   header ul li .submenu li a{
+  
+    margin: 0px 0px;
+    color: #fff;
+    
+
+       
+   }
+
+   header ul li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+   }
+
+
+ 
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="" class="logo">Kadena</a>
+        <nav>
+            <ul>
+                
+
+                <li >
+                    <a href="/">Inicio</a>
+                </li>
+
+                
+                <li>
+                    <a href="">Nosotros</a>
+                </li>
+
+                
+                <li>
+                    <a href="#" >Productos</a>
+                    <ul class="submenu">
+                        <li><a href="#">Defi</a></li>
+                        <li><a href="#">Wallet</a></li>
+                        <li><a href="#">NFT</a></li>
+                        <li><a href="#">Pact</a></li>
+                       
+                    </ul>
+                 </li>
+
+                
+                 <li>
+                    <a href="#" >Portafolio</a>
+                    <ul class="submenu">
+                        <li><a href="#">Kadena</a></li>
+                        <li><a href="#">Oasis Nerwork</a></li>
+                        <li><a href="#">Syscoin</a></li>
+                        <li><a href="#">Polkadot</a></li>
+                       
+                    </ul>
+                 </li>
+
+                
+                <li>
+                    <a href="">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="zona1">
+        
+    </section>
+    <h1 style="text-align: center; font-size: 3em; margin-top: 20px; margin-bottom: 20px;">Kadena by Abel Mac</h1>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis corrupti dicta doloremque explicabo accusantium, cupiditate quidem, ratione soluta fugiat quia facilis, itaque laudantium in obcaecati neque sed voluptatum voluptas illum ducimus ipsum officiis? Incidunt similique, quam assumenda eaque neque reiciendis a. Odit sunt corporis quos officiis repudiandae architecto aliquam voluptates sit reiciendis debitis illo, impedit dolore, ipsa sint porro veritatis aliquid animi ex! Itaque consequuntur odio expedita, ipsum, cum fugit iusto, rem tempora ullam dignissimos voluptatum aliquam fugiat similique sint suscipit quaerat a! Molestiae similique saepe fugiat expedita necessitatibus vero culpa voluptatum? Vitae, perspiciatis! In blanditiis veniam a eos.
+      </section>
+
+      <script type = "text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+
+            header.classList.toggle("abajo", window.scrollY > 0);
+        })
+      </script>
+
+    
+</body>
+</html>
